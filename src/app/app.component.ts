@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from "@angular/core";
 
+//Component Decorator
 @Component({
   selector: 'pm-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `
+  <div><h1>{{pageTitle}}</h1>
+      <div>My First Component </div>
+  </div>
+  `
 })
-export class AppComponent {
-  title = 'aom-new';
+
+//Class
+export class AppComponent{
+  pageTitle: string = 'Acme Product Management';
 }

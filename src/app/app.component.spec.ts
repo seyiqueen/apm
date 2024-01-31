@@ -17,13 +17,13 @@ describe('AppComponent', () => {
   it(`should have the 'aom-new' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('aom-new');
+    expect(app.pageTitle).toEqual('apm-new');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, aom-new');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, apm-new');
   });
 });
