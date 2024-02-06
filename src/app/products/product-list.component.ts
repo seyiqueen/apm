@@ -1,14 +1,19 @@
-import { NgFor, NgIf } from "@angular/common";
+import { CurrencyPipe, LowerCasePipe, NgFor, NgIf } from "@angular/common";
 import { Component } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
 @Component({
     selector: 'pm-products',
     standalone: true,
-    imports: [NgIf, NgFor],
+    imports: [NgIf, NgFor, FormsModule, LowerCasePipe, CurrencyPipe],
     templateUrl: './product-list.component.html'
 })
 export class ProductListComponent{
-    pageTitle: string = 'Product List';
+    pageTitle = 'Product List';
+    imageWidth = 50;
+    imageMargin = 2;
+    showImage = false;
+    listFilter = 'cart';
     products: any[] = [
         {
             "productId": 2,
@@ -31,4 +36,8 @@ export class ProductListComponent{
             "imageUrl": "assets/images/hammer.png"
         }
     ];
+    toggleImage(): void{
+        this.showImage = !this.showImage;
+    }
+
 }
