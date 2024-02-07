@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { ProductListComponent } from "./products/product-list.component";
 
+
 //Component Decorator
 @Component({
   selector: 'pm-root',
